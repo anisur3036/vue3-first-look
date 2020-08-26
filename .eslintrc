@@ -1,0 +1,13 @@
+{
+  "extends": ["plugin:vue/vue3-recommended", "eslint:recommended"],
+  "rules": {
+    "no-unused-vars": "warn",
+    "semi": ["warn", "always"],
+    "quotes": ["warn", "single"],
+    "vue/html-closing-bracket-newline": "off",
+    "eslint-disable-next-line": "off",
+    "vue/multiline-html-element-content-newline": "off",
+    "vue/no-unused-components": "warn",
+    "no-undef": "warn"
+  }
+}
