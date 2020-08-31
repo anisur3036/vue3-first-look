@@ -4,7 +4,6 @@
       Counter
     </h2>
     <p>{{ state.message }}</p>
-    <!-- <button class="bg-gray-700 text-white rounded px-4 py-1 focus:shadow-md focus:outline-none" @click="reverseMessage">Reverse Message</button> -->
     <button
       class="bg-green-700 text-white rounded px-4 py-1 focus:shadow-md focus:outline-none"
       @click="add"
@@ -25,11 +24,19 @@
       <div>
         <input
           id="showMonth"
-          type="number"
-          name="showMonth"
-        > <button @click="addMonth">
-          addMonth
-        </button>
+          type="checkbox"
+          name="threeMonths"
+        > 3 Months
+        <input
+          id="showMonth"
+          type="checkbox"
+          name="sixMonths"
+        > 6 Months
+        <input
+          id="showMonth"
+          type="checkbox"
+          name="oneYear"
+        > 12 Months
         <li
           v-for="monthlist in state.months"
           :key="monthlist"
@@ -73,14 +80,6 @@ export default {
     const remove = () => {
       state.counter--;
     };
-
-    watch(
-      () => console.log(123),
-      (oldvalue, newValue) => {
-        console.log(newValue);
-        console.log(oldvalue);
-      }
-    );
 
     return {
       addMonth,
